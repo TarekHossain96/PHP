@@ -27,8 +27,28 @@ class Student implements School, College, Versity{
 		echo "I am a Versity Student.</br>";
 	}
 }
+class Teacher implements School, College, Versity{
+	
+	function __construct()
+	{
+		$this->mySchool();
+		$this->myCollege();
+		$this->myVersity();
+	}
+	public function mySchool(){
+		echo "I am a School Teacher.</br>";
+	}
+	public function myCollege(){
+		echo "I am a College Teacher.</br>";
+	}
+	public function myVersity(){
+		echo "I am a Versity Teacher.</br>";
+	}
+}
 $student = new Student;
 $student->mySchool();
 $student->myCollege();
 $student->myVersity();
+echo "</br>";
+$student = new Teacher;
 ?>
